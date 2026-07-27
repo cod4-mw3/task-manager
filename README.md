@@ -13,12 +13,12 @@ A full-stack task manager built with **FastAPI**, **SQLite**, and vanilla **HTML
 
 ## Tech Stack
 
-| Layer    | Technology              |
-|----------|------------------------|
-| Backend  | FastAPI + SQLAlchemy   |
-| Database | SQLite                  |
-| Frontend | HTML / CSS / JS         |
-| Deploy   | Render                  |
+| Layer    | Technology            |
+|----------|-----------------------|
+| Backend  | FastAPI + SQLAlchemy  |
+| Database | SQLite                |
+| Frontend | HTML / CSS / JS       |
+| Deploy   | Railway               |
 
 ## Local Setup
 
@@ -40,22 +40,21 @@ Open [http://localhost:8000](http://localhost:8000).
 
 ## API Endpoints
 
-| Method | Endpoint        | Description          |
-|--------|-----------------|----------------------|
-| GET    | /tasks          | List all tasks       |
-| POST   | /tasks          | Create a task        |
-| PUT    | /tasks/{id}     | Update a task        |
-| DELETE | /tasks/{id}     | Delete a task        |
+| Method | Endpoint     | Description    |
+|--------|--------------|----------------|
+| GET    | /tasks       | List all tasks |
+| POST   | /tasks       | Create a task  |
+| PUT    | /tasks/{id}  | Update a task  |
+| DELETE | /tasks/{id}  | Delete a task  |
 
 Interactive API docs are available at `/docs`.
 
-## Deploy to Render
+## Deploy to Railway
 
 1. Push this repo to GitHub.
-2. Go to [render.com](https://render.com) → **New Web Service**.
-3. Connect your GitHub repo.
-4. Render picks up `render.yaml` automatically — click **Deploy**.
-5. Your live URL appears in the dashboard once the build finishes.
+2. Go to [railway.app](https://railway.app) → **New Project** → **Deploy from GitHub repo**.
+3. Select your repository — Railway auto-detects Python and installs dependencies.
+4. Go to **Settings → Networking → Generate Domain** to get your public URL.
 
 ## Project Structure
 
@@ -68,6 +67,6 @@ task-manager/
 ├── static/
 │   └── index.html   # Single-page frontend
 ├── requirements.txt
-├── render.yaml      # Render deployment config
+├── railway.toml     # Railway deployment config
 └── README.md
 ```
